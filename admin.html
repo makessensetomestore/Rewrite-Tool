@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <h1>Admin Dashboard</h1>
+  <div id="user-list">
+    <h2>Users</h2>
+    <table>
+      <thead><tr><th>Email</th><th>Rewrites Used</th><th>Conversions</th><th>Premium</th></tr></thead>
+      <tbody id="users-body"></tbody>
+    </table>
+  </div>
+
+  <div id="watermark-settings">
+    <h2>Watermark Settings</h2>
+    <label>
+      <input type="checkbox" id="wm-enabled"> Enable watermark
+    </label><br>
+    <label>Text: <input type="text" id="wm-text" /></label><br>
+    <label>Opacity: <input type="range" id="wm-opacity" min="0" max="1" step="0.1" /></label><br>
+    <label>Position:
+      <select id="wm-position">
+        <option value="center">Center</option>
+        <option value="diagonal">Diagonal</option>
+        <option value="tiled">Tiled</option>
+      </select>
+    </label><br>
+    <button id="wm-save">Save</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
