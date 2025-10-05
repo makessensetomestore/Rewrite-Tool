@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rewrite Tool</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>📝 Rewrite Tool</h1>
+    <p>Choose a style to rewrite your text!</p>
+  </header>
+
+  <main>
+    <textarea id="inputText" placeholder="Type or paste your text here..."></textarea>
+
+    <div class="options">
+      <select id="styleSelect">
+        <option value="formal">Formal</option>
+        <option value="casual">Casual</option>
+        <option value="friendly">Friendly</option>
+        <option value="knowledge">Knowledge Boost</option>
+        <option value="smartify">Smartify</option>
+        <option value="upsideDown">Upside Down</option>
+        <option value="backwards">Backwards</option>
+      </select>
+      <button onclick="rewriteText()">Rewrite</button>
+    </div>
+
+    <div id="output"></div>
+  </main>
+
+  <footer>
+    <p>Made with ❤️ by Stephanie</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
