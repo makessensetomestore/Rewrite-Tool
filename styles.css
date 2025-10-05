@@ -1,0 +1,73 @@
+/* Basic Page Styling */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f4f4f4;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background: #5e60ce;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+main {
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+textarea {
+  width: 100%;
+  height: 120px;
+  font-size: 16px;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+select, button {
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+}
+
+button {
+  background: #5e60ce;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #4e51b5;
+}
+
+#output {
+  padding: 15px;
+  background: white;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 18px;
+  min-height: 80px;
+}
+
+footer {
+  text-align: center;
+  padding: 15px;
+  font-size: 14px;
+  background: #eee;
+  margin-top: 40px;
+}
