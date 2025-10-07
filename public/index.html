@@ -4,35 +4,57 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Rewrite Tool</title>
+  <meta name="description" content="Rewrite or transform your text with AI. Upside Down, Backwards, SEO rewrite & more." />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <!-- Promo Banner -->
+  <div id="promo-banner" class="promo-banner hidden">
+    🔥 Limited-Time Offer: Unlimited for <strong>$0.99 / month</strong> or <strong>$10 / year</strong>. Offer ends Oct 31. <button id="upgrade-btn">Upgrade Now</button>
+  </div>
+
   <header>
-    <h1>📝 Rewrite Tool</h1>
-    <p>Choose a style to rewrite your text!</p>
+    <h1>✏️ Rewrite Tool</h1>
   </header>
 
-  <main>
-    <textarea id="inputText" placeholder="Type or paste your text here..."></textarea>
+  <div id="auth-section">
+    <input type="email" id="email-input" placeholder="Email" />
+    <input type="password" id="password-input" placeholder="Password" />
+    <button id="signup-btn">Sign Up</button>
+    <button id="login-btn">Log In</button>
+    <p id="auth-message"></p>
+  </div>
 
-    <div class="options">
-      <select id="styleSelect">
-        <option value="formal">Formal</option>
-        <option value="casual">Casual</option>
-        <option value="friendly">Friendly</option>
-        <option value="knowledge">Knowledge Boost</option>
-        <option value="smartify">Smartify</option>
-        <option value="upsideDown">Upside Down</option>
-        <option value="backwards">Backwards</option>
-      </select>
-      <button onclick="rewriteText()">Rewrite</button>
+  <div id="tool-section" class="hidden">
+    <p>Welcome, <span id="user-email"></span> | Credits: <span id="credit-count">0</span></p>
+    <button id="logout-btn">Log Out</button>
+
+    <textarea id="input-text" placeholder="Type or paste your text here..."></textarea>
+
+    <div class="options-row">
+      <select id="rewrite-style"></select>
+      <button id="rewrite-btn">Rewrite</button>
     </div>
 
-    <div id="output"></div>
-  </main>
+    <div id="output-section">
+      <textarea id="output-text" readonly placeholder="Result appears here..."></textarea>
+      <div class="action-buttons">
+        <button id="copy-btn">Copy</button>
+        <button id="download-btn">Download</button>
+      </div>
+      <div id="word-count">Words: 0</div>
+    </div>
+
+    <h2>Text Conversions</h2>
+    <div id="convert-grid"></div>
+
+    <!-- Ad placeholders commented out (for later) -->
+    <!-- <div id="ad-top"></div> -->
+    <!-- <div id="ad-content"></div> -->
+  </div>
 
   <footer>
-    <p>Made with ❤️ by Stephanie</p>
+    <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Use</a>
   </footer>
 
   <script src="script.js"></script>
