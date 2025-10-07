@@ -4,54 +4,67 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Rewrite Tool</title>
-  <meta name="description" content="Rewrite or transform your text with AI. Upside Down, Backwards, SEO rewrite & more." />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- Promo Banner -->
   <div id="promo-banner" class="promo-banner hidden">
-    🔥 Limited-Time Offer: Unlimited for <strong>$0.99 / month</strong> or <strong>$10 / year</strong>. Offer ends Oct 31. <button id="upgrade-btn">Upgrade Now</button>
+    🔥 Special Offer: $0.99 / month or $10 / year (ends Oct 31)  
+    <span class="regular-price">Regular: $5 / month</span>
+    <button id="upgrade-btn">Upgrade Now</button>
   </div>
 
   <header>
     <h1>✏️ Rewrite Tool</h1>
+    <button id="logout-btn" class="top-right hidden">Log Out</button>
+    <button id="dark-mode-toggle" class="top-right hidden">🌙</button>
   </header>
 
-  <div id="auth-section">
+  <section id="auth-section">
+    <p>Please sign in so we can email you your results.</p>
     <input type="email" id="email-input" placeholder="Email" />
     <input type="password" id="password-input" placeholder="Password" />
+    <input type="password" id="confirm-password-input" placeholder="Confirm Password" class="hidden" />
+    <label><input type="checkbox" id="stay-logged-in"> Keep me logged in</label><br>
     <button id="signup-btn">Sign Up</button>
     <button id="login-btn">Log In</button>
+    <p><a href="#" id="forgot-password-link">Forgot password?</a></p>
     <p id="auth-message"></p>
-  </div>
+  </section>
 
-  <div id="tool-section" class="hidden">
-    <p>Welcome, <span id="user-email"></span> | Credits: <span id="credit-count">0</span></p>
-    <button id="logout-btn">Log Out</button>
-
-    <textarea id="input-text" placeholder="Type or paste your text here..."></textarea>
-
-    <div class="options-row">
-      <select id="rewrite-style"></select>
-      <button id="rewrite-btn">Rewrite</button>
+  <section id="tool-section" class="hidden">
+    <div class="user-header">
+      <span id="user-email"></span> | Credits: <span id="credit-count"></span>
     </div>
 
-    <div id="output-section">
-      <textarea id="output-text" readonly placeholder="Result appears here..."></textarea>
-      <div class="action-buttons">
-        <button id="copy-btn">Copy</button>
-        <button id="download-btn">Download</button>
+    <div class="tool-block">
+      <h2>Rewrite Styles</h2>
+      <textarea id="input-text" placeholder="Enter text..."></textarea>
+      <div class="options-row">
+        <select id="rewrite-style"></select>
+        <button id="rewrite-btn">Rewrite</button>
       </div>
-      <div id="word-count">Words: 0</div>
+      <div id="output-section">
+        <textarea id="output-text" readonly></textarea>
+        <div class="action-buttons">
+          <button id="copy-btn">Copy</button>
+          <button id="download-btn">Download</button>
+        </div>
+        <div id="word-count">Words: 0</div>
+      </div>
     </div>
 
-    <h2>Text Conversions</h2>
-    <div id="convert-grid"></div>
+    <div class="tool-block">
+      <h2>Text Transformations</h2>
+      <div id="convert-grid"></div>
+    </div>
 
-    <!-- Ad placeholders commented out (for later) -->
-    <!-- <div id="ad-top"></div> -->
-    <!-- <div id="ad-content"></div> -->
-  </div>
+    <div class="style-panels">
+      <h3>Styling Options</h3>
+      <div id="color-panel"></div>
+      <div id="shadow-panel"></div>
+      <div id="gradient-panel"></div>
+    </div>
+  </section>
 
   <footer>
     <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Use</a>
